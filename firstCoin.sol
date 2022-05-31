@@ -30,5 +30,7 @@ contract coin {
 
         balances[msg.sender] -= _amount;
         balances[_reciever] += _amount;
+
+        emit sent(msg.sender, _reciever, _amount);
     }
 }
